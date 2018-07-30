@@ -1,11 +1,12 @@
 {
 	"name" : "ionic-native-http-angular-wrapper",
-	"version" : "1.0.1",
+	"version" : "1.0.2",
 	"description" : "A basic package for making @ionic-native/http behave with observables and fall back to @angular/http.",
 	"main" : "./dist/index.js",
 	"typings" : "./dist/index.d.ts",
 	"scripts" : {
-		"build" : "rm -rf aot dist && npm run ngc",
+		"prepare": "npm run build",
+		"build" : "shx rm -rf aot dist && npm run ngc",
 		"ngc" : "ngc",
 		"publishPackage" : "npm run build && npm publish"
 	},
@@ -23,9 +24,9 @@
 	"author" : "Ganey",
 	"license" : "MIT",
 	"bugs" : {
-		"url" : "https://github.com/ganey/ionic-native-http-angular-wrapper/issues"
+		"url" : "https://github.com/CaspianTechnologies/ionic-native-http-angular-wrapper/issues"
 	},
-	"homepage" : "https://github.com/ganey/ionic-native-http-angular-wrapper#readme",
+	"homepage" : "https://github.com/CaspianTechnologies/ionic-native-http-angular-wrapper#readme",
 	"devDependencies" : {
 		"@angular/common" : "^4.4.0",
 		"@angular/compiler" : "^4.4.0",
@@ -36,9 +37,11 @@
 		"@angular/platform-browser-dynamic" : "^4.4.0",
 		"@ionic-native/http" : "^4.3.0",
 		"@types/node" : "^6.0.60",
-		"rxjs" : "^5.5.0",
+		"rxjs": "^6.1.0",
+		"rxjs-compat": "^6.2.0",
 		"typescript": "^2.3.4",
-		"zone.js" : "^0.8.10"
+		"zone.js" : "^0.8.10",
+		"shx": "^0.3.2"
 	},
 	"dependencies" : {
 		"@ionic-native/core" : "^4.3.0"
